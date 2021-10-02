@@ -1,1 +1,79 @@
-<p>inicio works!</p>
+<div class="example-container">
+    <mat-toolbar color="warn" class="example-toolbar" >
+
+        <button mat-icon-button (click)="drawer.toggle()">
+            <mat-icon *ngIf="!drawer.opened">menu</mat-icon>
+            <mat-icon *ngIf="drawer.opened">close</mat-icon>    
+        </button>
+
+        <h1 class="example-app-name">ENVIOS PEPA</h1>
+
+        <span class="example-spacer"></span>
+
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item [routerLink]="['/perfil']">
+                <mat-icon>account_box</mat-icon>
+                <span>Mi Perfil</span>
+            </button>
+
+
+            <button mat-menu-item >
+                <mat-icon>exit_to_app</mat-icon>
+                <span>Cerrar Sesión</span>
+            </button>
+
+            <button mat-menu-item >
+                <mat-icon>pets</mat-icon>
+                <span>Prueba</span>
+            </button>
+
+            <button mat-menu-item >
+                <mat-icon>emoji_emotions</mat-icon>
+                <span>Prueba_2</span>
+            </button>
+
+
+        </mat-menu>
+  
+    
+    </mat-toolbar>
+
+    <mat-drawer-container class="example-sidenav-container" autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+            
+            <button mat-menu-item style="cursor: pointer">
+                <mat-icon>search</mat-icon>
+                <span>Buscar</span>
+            </button>
+            <mat-divider></mat-divider>
+
+            <button mat-menu-item style="cursor: pointer">
+                <mat-icon>search</mat-icon>
+                <span>Buscar</span>
+            </button>
+            <mat-divider></mat-divider>
+
+
+            <button mat-menu-item style="cursor: pointer">
+                <mat-icon>search</mat-icon>
+                <span>Buscar</span>
+            </button>
+            <mat-divider></mat-divider>
+
+
+
+        </mat-drawer>
+      
+        <div class="example-sidenav-content">
+            
+              
+        </div>
+      
+      </mat-drawer-container>
+
+
+</div>
